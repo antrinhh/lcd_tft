@@ -13,7 +13,7 @@
 ######################################
 # target
 ######################################
-TARGET = screen_h523
+TARGET = lcd_tft
 
 
 ######################################
@@ -62,7 +62,8 @@ Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c.c \
 Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_i2c_ex.c \
 Core/Src/usart.c \
 Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart.c \
-Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c
+Drivers/STM32H5xx_HAL_Driver/Src/stm32h5xx_hal_uart_ex.c \
+modules/log/src/log.c
 
 # ASM sources
 ASM_SOURCES =  \
@@ -127,7 +128,9 @@ C_INCLUDES =  \
 -IDrivers/STM32H5xx_HAL_Driver/Inc \
 -IDrivers/STM32H5xx_HAL_Driver/Inc/Legacy \
 -IDrivers/CMSIS/Device/ST/STM32H5xx/Include \
--IDrivers/CMSIS/Include
+-IDrivers/CMSIS/Include \
+-Iapp/inc \
+-Imodules/log/inc
 
 
 # compile gcc flags
